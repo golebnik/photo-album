@@ -1,0 +1,88 @@
+.album-list ul > li {
+    font-size: 140%;
+    list-style: none;
+}
+
+.album-list a {
+    color: black;
+}
+
+body {
+    background: aliceblue;
+}
+h3 {
+    margin-left: 20px;
+}
+
+a {
+    color: black;
+}
+
+a:hover {
+    color: red;
+    text-decoration: none;
+}
+
+.photo-link {
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-right: 2px;
+    margin-left: 22px;
+    padding-left: 40px;
+    text-indent: -38px;
+}
+.photo-link a {
+    color: black;
+}
+.photo-link a:hover {
+    text-decoration: none;
+    color: red;
+}
+.placeholder-text {
+    border: 1px solid seagreen;
+    background: palegreen;
+    border-radius: 3px;
+    margin: 100px 50px 100px 50px;
+    padding: 8px;
+}
+.selected {
+    border: 1px solid seagreen;
+    border-radius: 3px;
+    color: white;
+    background: palegreen;
+}
+.photo-wrapper {
+    display: block;
+    margin: auto;
+    float: none;
+    width: auto;
+    /*background: black;*/
+}
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+    height: auto;
+    overflow: hidden;
+}
+img.center {
+    display: block;
+    margin: auto;
+    vertical-align: middle;
+    max-width: 100%; max-height: 90%;
+    box-sizing: border-box;
+    border: 10px solid black;
+}
+
+.photo-loading {
+    font-size: 40px;
+    text-align: center;
+    display: block;
+    margin: auto;
+    vertical-align: middle;
+    width: 55%;
+    box-sizing: border-box;
+    position: fixed;
+    top: 50%;
+    color: green;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html ng-app="photoAlbum">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <title>Photo Album</title>
+    <script src="angular.js"></script>
+    <link href="bootstrap.css" rel="stylesheet" />
+    <link href="bootstrap-theme.css" rel="stylesheet" />
+    <link href="main.css" rel="stylesheet" />
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        angular.module("photoAlbum", ["customFilters", "ngRoute", "ngAnimate"])
+        .config(function ($routeProvider) {
+            $routeProvider.when("/albums", {
+                templateUrl: "/views/albumList.html"
+            });
+
+            $routeProvider.when("/album/:albumName", {
+                templateUrl: "/views/album.html"
+            });
+
+            $routeProvider.otherwise({
+                templateUrl: "/views/albumList.html"
+            });
+        });
+    </script>
+    <script src="controllers/photoAlbum.js"></script>
+    <script src="filters/customFilters.js"></script>
+    <script src="ngmodules/angular-route.js"></script>
+    <script src="ui-bootstrap.min.js"></script>
+    <script src="angular-animate.min.js"></script>
+</head>
+<body ng-controller="photoAlbumCtrl">
+
+    <div class="alert alert-danger" ng-show="data.error">
+        Error ({{data.error.status}}). The photo album data was not loaded.
+        <a href="/app.html" class="alert-link">Click here to try again</a>
+    </div>
+
+    <ng-view/>
+
+</body>
+</html>

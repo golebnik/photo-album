@@ -1,0 +1,13 @@
+<div class="" ng-controller="photoAlbumCtrl" ng-hide="data.error">
+
+    <div class="navbar">
+        <a class="navbar-brand" href="#">PHOTO ALBUMS</a>
+    </div>
+
+    <div class="album-list">
+        <ul ng-repeat="(name, photos) in album_index">
+            <li><a href="#/album/{{name}}">{{name}} &ndash; {{photos.length}} photos</a></li>
+        </ul>
+    </div>
+
+</div>
